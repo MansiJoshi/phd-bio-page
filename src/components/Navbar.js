@@ -12,15 +12,15 @@ function Navbar() {
                 <Container maxWidth="xl">
                     <Toolbar>
                         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                            Mansi Thanki, MS
+                            Mansi Thanki
                         </Typography>
                         <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                             {
                                 pages.map((page) => (
                                     <Button key={page}>
                                         <Link
-                                            to={`/${page}`}
-                                            sx={{ my: 2, color: 'white' }}
+                                            to={`/${page === "Home" ? "" : page}`}
+                                            sx={{ my: 2, color: 'white', textDecoration: "none" }}
                                         >
                                             {page}
                                         </Link>
@@ -30,7 +30,7 @@ function Navbar() {
                             <Button>
                                 <Link
                                     href="https://www.linkedin.com/in/mansithanki/"
-                                    style={{ lineHeight: 1.5 }}
+                                    style={{ lineHeight: 1.5, textDecoration: "none" }}
                                     target="__blank__"
                                 >
                                     <LinkedInIcon style={{ color: "white" }} />
